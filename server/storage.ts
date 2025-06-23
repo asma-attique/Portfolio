@@ -66,8 +66,8 @@ export class MemStorage implements IStorage {
       email: "asma.attique@email.com",
       linkedin: "linkedin.com/in/asmaattique",
       github: "github.com/asmaattique",
-      location: "San Francisco, CA",
-      yearsExperience: 5,
+      location: "Lahore, Pakistan",
+      yearsExperience: 2,
       bio: "I discovered my passion for software development during my time at UET Lahore, where I studied Computer Engineering. What started with basic code quickly grew into a deep interest in solving complex problems through technology.\n\nSince becoming a Software Engineer, I've worked across the full stack; designing databases, writing optimized SQL queries, developing robust .NET backend services, and building clean front-end interfaces. My experience spans from maintaining enterprise systems to contributing to legacy system migrations that demanded both precision and adaptability.\n\nOver time, I've become more intentional about writing clean, maintainable code and understanding not just how things work, but why. I'm especially drawn to building systems that are scalable, user-friendly, and built to last.\n\nOutside of code, I'm focused on leveling up, whether it's diving into modern frameworks, refining my architecture skills, or stepping outside my comfort zone to take on new challenges.",
       resumeUrl: "/resume.pdf",
       profileImageUrl: "@assets/1614353584301_1750668703673.jpg"
