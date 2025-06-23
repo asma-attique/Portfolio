@@ -70,7 +70,7 @@ export class MemStorage implements IStorage {
       yearsExperience: 5,
       bio: "I discovered my passion for programming during college and have been building software solutions ever since. My journey has taken me from junior developer to technical lead, working with diverse teams and technologies. I specialize in full-stack development with expertise in modern JavaScript frameworks, cloud architecture, and DevOps practices. I'm particularly interested in building scalable solutions that solve real-world problems. When I'm not coding, you'll find me contributing to open-source projects, mentoring junior developers, or exploring the latest developments in AI and machine learning.",
       resumeUrl: "/resume.pdf",
-      profileImageUrl: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400"
+      profileImageUrl: "@assets/1614353584301_1750668703673.jpg"
     };
 
     // Create skill categories
