@@ -58,19 +58,19 @@ export class MemStorage implements IStorage {
     // Create developer profile
     this.developer = {
       id: 1,
-      name: "John Smith",
-      firstName: "John",
-      lastName: "Smith",
+      name: "Asma Attique",
+      firstName: "Asma",
+      lastName: "Attique",
       title: "Senior Software Engineer",
       tagline: "Building scalable web applications and cloud solutions that make a difference. Passionate about clean code, modern technologies, and collaborative development.",
-      email: "john.smith@email.com",
-      linkedin: "linkedin.com/in/johnsmith",
-      github: "github.com/johnsmith",
+      email: "asma.attique@email.com",
+      linkedin: "linkedin.com/in/asmaattique",
+      github: "github.com/asmaattique",
       location: "San Francisco, CA",
       yearsExperience: 5,
       bio: "I discovered my passion for programming during college and have been building software solutions ever since. My journey has taken me from junior developer to technical lead, working with diverse teams and technologies. I specialize in full-stack development with expertise in modern JavaScript frameworks, cloud architecture, and DevOps practices. I'm particularly interested in building scalable solutions that solve real-world problems. When I'm not coding, you'll find me contributing to open-source projects, mentoring junior developers, or exploring the latest developments in AI and machine learning.",
       resumeUrl: "/resume.pdf",
-      profileImageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400"
+      profileImageUrl: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400"
     };
 
     // Create skill categories
@@ -117,7 +117,7 @@ export class MemStorage implements IStorage {
         description: "A comprehensive analytics dashboard for e-commerce businesses featuring real-time sales tracking, customer insights, and automated reporting capabilities.",
         imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
         liveUrl: "https://demo.example.com",
-        githubUrl: "https://github.com/johnsmith/ecommerce-analytics",
+        githubUrl: "https://github.com/asmaattique/ecommerce-analytics",
         technologies: ["React", "Node.js", "PostgreSQL", "AWS"],
         featured: true,
         order: 1,
@@ -128,7 +128,7 @@ export class MemStorage implements IStorage {
         description: "A collaborative task management application with real-time updates, team workspaces, and advanced project tracking features.",
         imageUrl: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
         liveUrl: "https://taskapp.example.com",
-        githubUrl: "https://github.com/johnsmith/task-manager",
+        githubUrl: "https://github.com/asmaattique/task-manager",
         technologies: ["Vue.js", "Express", "MongoDB", "Socket.io"],
         featured: true,
         order: 2,
@@ -139,7 +139,7 @@ export class MemStorage implements IStorage {
         description: "A comprehensive weather API service providing accurate forecasts, historical data, and location-based weather insights for developers.",
         imageUrl: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
         liveUrl: "https://weather-api.example.com",
-        githubUrl: "https://github.com/johnsmith/weather-api",
+        githubUrl: "https://github.com/asmaattique/weather-api",
         technologies: ["Python", "FastAPI", "Docker", "Redis"],
         featured: true,
         order: 3,
