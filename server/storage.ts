@@ -74,7 +74,7 @@ export class MemStorage implements IStorage {
     };
 
     // Create skill categories
-    const frontendCategory: SkillCategory = { id: this.currentId++, name: "Frontend Development", order: 1 };
+    const frontendCategory: SkillCategory = { id: this.currentId++, name: "Frontend Technologies", order: 1 };
     const backendCategory: SkillCategory = { id: this.currentId++, name: "Backend Development", order: 2 };
     const cloudCategory: SkillCategory = { id: this.currentId++, name: "Cloud & DevOps", order: 3 };
     
@@ -84,18 +84,18 @@ export class MemStorage implements IStorage {
 
     // Create skills
     const frontendSkills: Skill[] = [
-      { id: this.currentId++, name: "React", categoryId: frontendCategory.id, order: 1 },
-      { id: this.currentId++, name: "Vue.js", categoryId: frontendCategory.id, order: 2 },
-      { id: this.currentId++, name: "TypeScript", categoryId: frontendCategory.id, order: 3 },
-      { id: this.currentId++, name: "Tailwind CSS", categoryId: frontendCategory.id, order: 4 },
+      { id: this.currentId++, name: "WPF", categoryId: frontendCategory.id, order: 1 },
+      { id: this.currentId++, name: "WinForms", categoryId: frontendCategory.id, order: 2 },
+      { id: this.currentId++, name: "HTML", categoryId: frontendCategory.id, order: 3 },
+      { id: this.currentId++, name: "CSS", categoryId: frontendCategory.id, order: 4 },
+      { id: this.currentId++, name: "JavaScript", categoryId: frontendCategory.id, order: 5 },
     ];
 
     const backendSkills: Skill[] = [
-      { id: this.currentId++, name: "Node.js", categoryId: backendCategory.id, order: 1 },
-      { id: this.currentId++, name: "Python", categoryId: backendCategory.id, order: 2 },
-      { id: this.currentId++, name: "Express.js", categoryId: backendCategory.id, order: 3 },
-      { id: this.currentId++, name: "PostgreSQL", categoryId: backendCategory.id, order: 4 },
-      { id: this.currentId++, name: "MongoDB", categoryId: backendCategory.id, order: 5 },
+      { id: this.currentId++, name: "C#", categoryId: backendCategory.id, order: 1 },
+      { id: this.currentId++, name: ".NET Framework", categoryId: backendCategory.id, order: 2 },
+      { id: this.currentId++, name: ".NET Core", categoryId: backendCategory.id, order: 3 },
+      { id: this.currentId++, name: "Entity Framework", categoryId: backendCategory.id, order: 4 },
     ];
 
     const cloudSkills: Skill[] = [
