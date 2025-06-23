@@ -68,7 +68,9 @@ export function AboutSection() {
           <div>
             <h3 className="text-2xl font-semibold text-slate-800 mb-6">My Journey</h3>
             <div className="space-y-4 text-slate-600 leading-relaxed">
-              <p>{developer?.bio}</p>
+              {developer?.bio.split('\n\n').map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
             </div>
             
             {/* Resume Download */}
