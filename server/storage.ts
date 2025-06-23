@@ -76,11 +76,13 @@ export class MemStorage implements IStorage {
     // Create skill categories
     const frontendCategory: SkillCategory = { id: this.currentId++, name: "Frontend Technologies", order: 1 };
     const backendCategory: SkillCategory = { id: this.currentId++, name: "Backend Development", order: 2 };
-    const cloudCategory: SkillCategory = { id: this.currentId++, name: "Cloud & DevOps", order: 3 };
+    const databaseCategory: SkillCategory = { id: this.currentId++, name: "Database & ORM", order: 3 };
+    const toolsCategory: SkillCategory = { id: this.currentId++, name: "Tools & Technologies", order: 4 };
     
     this.skillCategories.set(frontendCategory.id, frontendCategory);
     this.skillCategories.set(backendCategory.id, backendCategory);
-    this.skillCategories.set(cloudCategory.id, cloudCategory);
+    this.skillCategories.set(databaseCategory.id, databaseCategory);
+    this.skillCategories.set(toolsCategory.id, toolsCategory);
 
     // Create skills
     const frontendSkills: Skill[] = [
@@ -95,17 +97,24 @@ export class MemStorage implements IStorage {
       { id: this.currentId++, name: "C#", categoryId: backendCategory.id, order: 1 },
       { id: this.currentId++, name: ".NET Framework", categoryId: backendCategory.id, order: 2 },
       { id: this.currentId++, name: ".NET Core", categoryId: backendCategory.id, order: 3 },
-      { id: this.currentId++, name: "Entity Framework", categoryId: backendCategory.id, order: 4 },
+
     ];
 
-    const cloudSkills: Skill[] = [
-      { id: this.currentId++, name: "AWS", categoryId: cloudCategory.id, order: 1 },
-      { id: this.currentId++, name: "Docker", categoryId: cloudCategory.id, order: 2 },
-      { id: this.currentId++, name: "Kubernetes", categoryId: cloudCategory.id, order: 3 },
-      { id: this.currentId++, name: "CI/CD", categoryId: cloudCategory.id, order: 4 },
+    const databaseSkills: Skill[] = [
+      { id: this.currentId++, name: "SQL Server", categoryId: databaseCategory.id, order: 1 },
+      { id: this.currentId++, name: "Entity Framework", categoryId: databaseCategory.id, order: 2 },
+      { id: this.currentId++, name: "SQL", categoryId: databaseCategory.id, order: 3 },
+      { id: this.currentId++, name: "Database Design", categoryId: databaseCategory.id, order: 4 },
     ];
 
-    [...frontendSkills, ...backendSkills, ...cloudSkills].forEach(skill => {
+    const toolsSkills: Skill[] = [
+      { id: this.currentId++, name: "Visual Studio", categoryId: toolsCategory.id, order: 1 },
+      { id: this.currentId++, name: "SVN", categoryId: toolsCategory.id, order: 2 },
+      { id: this.currentId++, name: "Jira", categoryId: toolsCategory.id, order: 3 },
+      { id: this.currentId++, name: "SDLC", categoryId: toolsCategory.id, order: 4 },
+    ];
+
+    [...frontendSkills, ...backendSkills, ...databaseSkills, ...toolsSkills].forEach(skill => {
       this.skills.set(skill.id, skill);
     });
 
