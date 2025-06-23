@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { smoothScrollTo } from "@/lib/utils";
 import type { Developer } from "@shared/schema";
+import profileImage from "@assets/1614353584301_1750668703673.jpg";
 
 export function HeroSection() {
   const { data: developer, isLoading } = useQuery<Developer>({
@@ -61,7 +62,7 @@ export function HeroSection() {
           
           <div className="lg:w-1/2 flex justify-center">
             <img 
-              src={developer?.profileImageUrl} 
+              src={profileImage} 
               alt={`${developer?.name} - Software Engineer`}
               className="w-72 h-72 rounded-full object-cover border-4 border-white shadow-xl"
             />
