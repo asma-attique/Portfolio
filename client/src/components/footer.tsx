@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { Linkedin, Github, Twitter, Mail } from "lucide-react";
+import { Linkedin, Mail, MapPin } from "lucide-react";
 import type { Developer } from "@shared/schema";
 
 export function Footer() {
@@ -18,33 +18,23 @@ export function Footer() {
           
           <div className="flex space-x-6">
             <a 
-              href={`https://${developer?.linkedin}`}
+              href="https://www.linkedin.com/in/asmaattique20/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 hover:text-white transition-colors duration-200"
+              className="text-neutral-400 hover:text-purple-400 transition-colors duration-200"
             >
               <Linkedin className="h-5 w-5" />
             </a>
             <a 
-              href={`https://${developer?.github}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-400 hover:text-white transition-colors duration-200"
-            >
-              <Github className="h-5 w-5" />
-            </a>
-            <a 
-              href="#"
-              className="text-slate-400 hover:text-white transition-colors duration-200"
-            >
-              <Twitter className="h-5 w-5" />
-            </a>
-            <a 
-              href={`mailto:${developer?.email}`}
-              className="text-slate-400 hover:text-white transition-colors duration-200"
+              href="mailto:asma.attique.20@gmail.com"
+              className="text-neutral-400 hover:text-purple-400 transition-colors duration-200"
             >
               <Mail className="h-5 w-5" />
             </a>
+            <div className="flex items-center text-neutral-400">
+              <MapPin className="h-5 w-5 mr-2" />
+              <span className="text-sm">Lahore, Pakistan</span>
+            </div>
           </div>
         </div>
         
