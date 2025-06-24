@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(220, 15%, 15%);
+  --muted: hsl(210, 40%, 98%);
+  --muted-foreground: hsl(215, 15%, 45%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(220, 15%, 15%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(220, 15%, 15%);
+  --border: hsl(210, 25%, 88%);
+  --input: hsl(210, 25%, 88%);
+  --primary: hsl(239, 84%, 67%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(210, 40%, 98%);
+  --secondary-foreground: hsl(220, 15%, 15%);
+  --accent: hsl(210, 40%, 98%);
+  --accent-foreground: hsl(220, 15%, 15%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(239, 84%, 67%);
+  --radius: 0.75rem;
+  
+  /* Professional .NET theme colors */
+  --portfolio-primary: hsl(239, 84%, 67%);
+  --portfolio-secondary: hsl(262, 83%, 58%);
+  --portfolio-accent: hsl(147, 64%, 52%);
+  --portfolio-neutral-50: hsl(210, 40%, 98%);
+  --portfolio-neutral-100: hsl(210, 40%, 96%);
+  --portfolio-neutral-200: hsl(214, 32%, 91%);
+  --portfolio-neutral-300: hsl(213, 27%, 84%);
+  --portfolio-neutral-600: hsl(215, 15%, 45%);
+  --portfolio-neutral-700: hsl(215, 20%, 25%);
+  --portfolio-neutral-800: hsl(215, 28%, 17%);
+  --portfolio-neutral-900: hsl(220, 39%, 11%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(215, 81%, 59%);
+  --primary-foreground: hsl(220, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply antialiased bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .gradient-bg {
+    background: linear-gradient(135deg, var(--portfolio-primary) 0%, var(--portfolio-secondary) 100%);
+    position: relative;
+  }
+  
+  .gradient-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+  }
+  
+  .card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--portfolio-neutral-200);
+    border-radius: var(--radius);
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    border-color: var(--portfolio-primary);
+  }
+  
+  .tech-tag {
+    transition: all 0.2s ease-in-out;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    border: 1px solid var(--portfolio-neutral-200);
+  }
+  
+  .tech-tag:hover {
+    background-color: var(--portfolio-primary);
+    color: white;
+    border-color: var(--portfolio-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(147, 51, 234, 0.25);
+  }
+  
+  .nav-backdrop {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--portfolio-neutral-200);
+  }
+  
+  .section-title {
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--portfolio-primary), var(--portfolio-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .professional-card {
+    background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid var(--portfolio-neutral-200);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  }
+  
+  .code-accent {
+    font-family: 'Fira Code', monospace;
+    background: var(--portfolio-neutral-100);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    color: var(--portfolio-primary);
+    border: 1px solid var(--portfolio-neutral-200);
+  }
+}

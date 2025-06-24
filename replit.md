@@ -101,10 +101,11 @@ This is a modern full-stack portfolio application built for showcasing developer
 - **Static Assets**: Served from Express in production
 - **Database Migrations**: Drizzle Kit push command for schema updates
 
-## Changelog
+## Recent Changes
 
-Changelog:
-- June 24, 2025. Initial setup
+- June 24, 2025: Restructured project to move index.html and index.css to main portfolio folder
+- June 24, 2025: Updated footer with real LinkedIn, email, and Lahore address
+- June 24, 2025: Initial setup with professional .NET developer portfolio
 
 ## User Preferences
 
