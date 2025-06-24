@@ -44,7 +44,7 @@ export function HeroSection() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               {developer?.firstName} {developer?.lastName}
             </h1>
-            <h2 className="text-xl sm:text-2xl font-medium mb-6 text-white/90 code-accent">
+            <h2 className="text-xl sm:text-2xl font-medium mb-6 text-white/90">
               {developer?.title}
             </h2>
             <p className="text-lg mb-8 text-white/80 leading-relaxed font-light">
