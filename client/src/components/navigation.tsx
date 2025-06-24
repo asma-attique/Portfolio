@@ -45,7 +45,7 @@ export function Navigation() {
     <nav className="fixed top-0 w-full nav-backdrop z-50 border-b border-slate-200">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="text-xl font-bold text-slate-800">
+          <div className="text-xl font-bold section-title">
             Asma Attique
           </div>
           
@@ -56,8 +56,8 @@ export function Navigation() {
                 key={item.href}
                 onClick={() => handleNavClick(item.href)}
                 className={cn(
-                  "text-slate-600 hover:text-blue-600 transition-colors duration-200",
-                  activeSection === item.href && "text-blue-600"
+                  "text-neutral-600 hover:text-purple-600 transition-all duration-200 font-medium relative",
+                  activeSection === item.href && "text-purple-600 after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-purple-600 after:rounded-full"
                 )}
               >
                 {item.label}
@@ -67,7 +67,7 @@ export function Navigation() {
           
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-slate-600 hover:text-blue-600"
+            className="md:hidden text-neutral-600 hover:text-purple-600"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -83,8 +83,8 @@ export function Navigation() {
                   key={item.href}
                   onClick={() => handleNavClick(item.href)}
                   className={cn(
-                    "block w-full text-left px-3 py-2 text-slate-600 hover:text-blue-600 transition-colors duration-200",
-                    activeSection === item.href && "text-blue-600"
+                    "block w-full text-left px-3 py-2 text-neutral-600 hover:text-purple-600 transition-colors duration-200 font-medium",
+                    activeSection === item.href && "text-purple-600"
                   )}
                 >
                   {item.label}

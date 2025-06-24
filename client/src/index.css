@@ -1,39 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   --background: hsl(0, 0%, 100%);
-  --foreground: hsl(20, 14.3%, 4.1%);
-  --muted: hsl(60, 4.8%, 95.9%);
-  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --foreground: hsl(220, 15%, 15%);
+  --muted: hsl(210, 40%, 98%);
+  --muted-foreground: hsl(215, 15%, 45%);
   --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --popover-foreground: hsl(220, 15%, 15%);
   --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(20, 14.3%, 4.1%);
-  --border: hsl(20, 5.9%, 90%);
-  --input: hsl(20, 5.9%, 90%);
-  --primary: hsl(215, 81%, 59%);
-  --primary-foreground: hsl(220, 100%, 99%);
-  --secondary: hsl(210, 15%, 75%);
-  --secondary-foreground: hsl(220, 13%, 26%);
-  --accent: hsl(60, 4.8%, 95.9%);
-  --accent-foreground: hsl(24, 9.8%, 10%);
+  --card-foreground: hsl(220, 15%, 15%);
+  --border: hsl(210, 25%, 88%);
+  --input: hsl(210, 25%, 88%);
+  --primary: hsl(239, 84%, 67%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(210, 40%, 98%);
+  --secondary-foreground: hsl(220, 15%, 15%);
+  --accent: hsl(210, 40%, 98%);
+  --accent-foreground: hsl(220, 15%, 15%);
   --destructive: hsl(0, 84.2%, 60.2%);
   --destructive-foreground: hsl(60, 9.1%, 97.8%);
-  --ring: hsl(20, 14.3%, 4.1%);
-  --radius: 0.5rem;
+  --ring: hsl(239, 84%, 67%);
+  --radius: 0.75rem;
   
-  /* Portfolio specific colors */
-  --portfolio-gradient-start: hsl(227, 81%, 68%);
-  --portfolio-gradient-end: hsl(270, 41%, 62%);
-  --portfolio-secondary: hsl(210, 40%, 62%);
-  --portfolio-accent: hsl(158, 64%, 52%);
-  --portfolio-slate-50: hsl(210, 40%, 98%);
-  --portfolio-slate-600: hsl(210, 15%, 41%);
-  --portfolio-slate-700: hsl(210, 17%, 32%);
-  --portfolio-slate-800: hsl(210, 24%, 16%);
+  /* Professional .NET theme colors */
+  --portfolio-primary: hsl(239, 84%, 67%);
+  --portfolio-secondary: hsl(262, 83%, 58%);
+  --portfolio-accent: hsl(147, 64%, 52%);
+  --portfolio-neutral-50: hsl(210, 40%, 98%);
+  --portfolio-neutral-100: hsl(210, 40%, 96%);
+  --portfolio-neutral-200: hsl(214, 32%, 91%);
+  --portfolio-neutral-300: hsl(213, 27%, 84%);
+  --portfolio-neutral-600: hsl(215, 15%, 45%);
+  --portfolio-neutral-700: hsl(215, 20%, 25%);
+  --portfolio-neutral-800: hsl(215, 28%, 17%);
+  --portfolio-neutral-900: hsl(220, 39%, 11%);
 }
 
 .dark {
@@ -66,7 +69,9 @@
 
   body {
     @apply antialiased bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
   }
   
   html {
@@ -76,30 +81,77 @@
 
 @layer components {
   .gradient-bg {
-    background: linear-gradient(135deg, var(--portfolio-gradient-start) 0%, var(--portfolio-gradient-end) 100%);
+    background: linear-gradient(135deg, var(--portfolio-primary) 0%, var(--portfolio-secondary) 100%);
+    position: relative;
+  }
+  
+  .gradient-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
   }
   
   .card-hover {
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--portfolio-neutral-200);
+    border-radius: var(--radius);
   }
   
   .card-hover:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    border-color: var(--portfolio-primary);
   }
   
   .tech-tag {
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    border: 1px solid var(--portfolio-neutral-200);
   }
   
   .tech-tag:hover {
-    background-color: var(--primary);
-    color: var(--primary-foreground);
+    background-color: var(--portfolio-primary);
+    color: white;
+    border-color: var(--portfolio-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(147, 51, 234, 0.25);
   }
   
   .nav-backdrop {
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--portfolio-neutral-200);
+  }
+  
+  .section-title {
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--portfolio-primary), var(--portfolio-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .professional-card {
+    background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid var(--portfolio-neutral-200);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  }
+  
+  .code-accent {
+    font-family: 'Fira Code', monospace;
+    background: var(--portfolio-neutral-100);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    color: var(--portfolio-primary);
+    border: 1px solid var(--portfolio-neutral-200);
   }
 }

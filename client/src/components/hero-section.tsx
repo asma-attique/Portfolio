@@ -44,16 +44,16 @@ export function HeroSection() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               {developer?.firstName} {developer?.lastName}
             </h1>
-            <h2 className="text-xl sm:text-2xl font-medium mb-6 text-blue-100">
+            <h2 className="text-xl sm:text-2xl font-medium mb-6 text-white/90 code-accent">
               {developer?.title}
             </h2>
-            <p className="text-lg mb-8 text-blue-100 leading-relaxed">
+            <p className="text-lg mb-8 text-white/80 leading-relaxed font-light">
               {developer?.tagline}
             </p>
             <div className="flex justify-center lg:justify-start">
               <Button 
                 onClick={handleViewWork}
-                className="bg-white text-blue-600 hover:bg-blue-50 px-6 py-3 font-medium"
+                className="bg-white text-purple-600 hover:bg-purple-50 px-8 py-3 font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
                 View My Work
               </Button>

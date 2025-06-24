@@ -57,8 +57,8 @@ export function AboutSection() {
     <section id="about" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">About Me</h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-bold section-title mb-4">About Me</h2>
+          <p className="text-lg text-neutral-600 max-w-2xl mx-auto font-light">
             Software engineer with {developer?.yearsExperience}+ years of experience building 
             robust applications and solving complex software challenges.
           </p>
@@ -66,8 +66,8 @@ export function AboutSection() {
         
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h3 className="text-2xl font-semibold text-slate-800 mb-6">My Journey</h3>
-            <div className="space-y-4 text-slate-600 leading-relaxed">
+            <h3 className="text-2xl font-semibold section-title mb-6">My Journey</h3>
+            <div className="space-y-4 text-neutral-600 leading-relaxed font-light">
               {developer?.bio.split('\n\n').map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
@@ -75,7 +75,7 @@ export function AboutSection() {
             
             {/* Resume Download */}
             <div className="mt-8">
-              <Button asChild className="bg-blue-600 hover:bg-blue-700">
+              <Button asChild className="bg-purple-600 hover:bg-purple-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                 <a href={developer?.resumeUrl} target="_blank" rel="noopener noreferrer">
                   <Download className="mr-2 h-4 w-4" />
                   Download Resume
@@ -85,18 +85,18 @@ export function AboutSection() {
           </div>
           
           <div>
-            <h3 className="text-2xl font-semibold text-slate-800 mb-6">Technical Skills</h3>
+            <h3 className="text-2xl font-semibold section-title mb-6">Technical Skills</h3>
             
             {/* Skills Categories */}
             <div className="space-y-6">
               {skillCategories?.map((category) => (
                 <div key={category.id}>
-                  <h4 className="text-lg font-medium text-slate-700 mb-3">{category.name}</h4>
+                  <h4 className="text-lg font-semibold text-neutral-700 mb-3">{category.name}</h4>
                   <div className="flex flex-wrap gap-2">
                     {category.skills.map((skill) => (
                       <span 
                         key={skill.id}
-                        className="tech-tag bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium cursor-default"
+                        className="tech-tag bg-neutral-50 text-neutral-700 px-3 py-2 text-sm font-medium cursor-default"
                       >
                         {skill.name}
                       </span>
